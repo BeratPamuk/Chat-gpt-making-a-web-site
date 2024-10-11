@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background: #35424a;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items a,
+.menu-items button {
+    color: white;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animasyon ekledik */
+}
+
+.menu-items a:hover,
+.menu-items button:hover {
+    color: #f4f4f4;
+    transform: scale(1.1); /* Hover sırasında büyüme */
+}
+
+.menu-items a,
+.menu-items button {
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.news-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: scale(1.02);
+}
+
+.read-more {
+    background: #35424a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background: #4a5e66;
+}
+
+.account-info {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #35424a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #4a5e66;
+}
+
+/* Hamburger Menü için Stil */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #35424a;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .menu-items a {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+    }
+}
+#about {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease; /* Fade in animasyonu */
+}
+
+.contact-info {
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #35424a;
+}
+
+.phone-number:hover {
+    color: #4a5e66; /* Hover sırasında renk değişimi */
+    transform: scale(1.05); /* Hover sırasında büyüme */
+}
+
+.social-link {
+    text-decoration: none;
+    color: #35424a;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animasyon ekledik */
+}
+
+.social-link:hover {
+    color: #4a5e66; /* Hover sırasında renk değişimi */
+    transform: scale(1.1); /* Hover sırasında büyüme */
+}
+
+/* Fade in animasyonu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

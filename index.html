@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Haber Portalı</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">HaberPortalı</div>
+            <div class="menu" id="burger">&#9776;</div>
+            <div class="menu-items">
+                <a href="#home" onclick="showSection('home')">Anasayfa</a>
+                <a href="#about" onclick="showSection('about')">Hakkımızda</a>
+                <a href="#settings" onclick="showSection('settings')">Ayarlar</a>
+                <a href="#account" id="account-btn" onclick="showSection('account')">Hesap</a>
+                <button id="login-btn" onclick="showSection('login')">Giriş Yap</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content" id="home" style="display: block;">
+        <h1>Güncel Haberler</h1>
+        <div class="news-card" id="news-1">
+            <h2>Teknoloji Dünyasında Yenilikler</h2>
+            <p>Teknoloji sektöründe meydana gelen son gelişmeleri inceleyin.</p>
+            <button class="read-more">Devamını Oku</button>
+        </div>
+        <div class="news-card" id="news-2">
+            <h2>Yeni Sağlık Uygulamaları</h2>
+            <p>Sağlık alanında kullanılan yeni uygulamalar hakkında bilgi alın.</p>
+            <button class="read-more">Devamını Oku</button>
+        </div>
+        <div class="news-card" id="news-3">
+            <h2>Geleceğin Sporcuları</h2>
+            <p>Genç sporcuların geleceği ve potansiyelleri üzerine bir analiz.</p>
+            <button class="read-more">Devamını Oku</button>
+        </div>
+    </div>
+
+    <div class="content" id="about" style="display: none;">
+        <div id="about" class="content">
+            <h2>Biz Kimiz?</h2>
+            <p>
+                Biz, haber dünyasında en güncel ve doğru bilgileri sunmayı hedefleyen bir platformuz. 
+                Amacımız, kullanıcılarımıza en son gelişmeleri, analizleri ve makaleleri en iyi şekilde iletmektir.
+            </p>
+            
+            <h3>Bize Ulaşın</h3>
+            <p class="contact-info">Telefon: <span class="phone-number">999-999-99-99</span></p>
+            
+            <h3>Sosyal Medya</h3>
+            <p>
+                <a href="https://github.com/yourusername" class="social-link" target="_blank">GitHub</a> | 
+                <a href="https://youtube.com/yourchannel" class="social-link" target="_blank">YouTube</a>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="content" id="settings" style="display: none;">
+        <h1>Ayarlar</h1>
+        <p>Ayarları buradan yapabilirsiniz.</p>
+    </div>
+
+    <div class="content" id="account" style="display: none;">
+        <h1>Hesap Bilgileri</h1>
+        <div class="account-info">
+            <label>Kullanıcı Adı:</label>
+            <span id="account-username"></span>
+            <br>
+            <label>Şifre:</label>
+            <span id="account-password"></span>
+            <br>
+        </div>
+        <button id="logout-btn">Çıkış Yap</button>
+    </div>
+
+    <div class="content" id="login" style="display: none;">
+        <h1>Giriş Yap</h1>
+        <form id="login-form">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" required>
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p>Hesabın yok mu? <a href="#register" id="register-link" onclick="showSection('register')">Hesap oluştur!</a></p>
+    </div>
+
+    <div class="content" id="register" style="display: none;">
+        <h1>Hesap Oluştur</h1>
+        <form id="register-form">
+            <label for="new-username">Kullanıcı Adı:</label>
+            <input type="text" id="new-username" required>
+            <label for="new-password">Şifre:</label>
+            <input type="password" id="new-password" required>
+            <label for="confirm-password">Şifreyi Tekrar Gir:</label>
+            <input type="password" id="confirm-password" required>
+            <button type="submit">Hesap Oluştur</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
