@@ -145,7 +145,7 @@ button:hover {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
-    animation: fadeIn 0.5s ease; /* Fade in animasyonu */
+    animation: fadeIn1 0.5s ease; /* Fade in animasyonu */
 }
 
 .contact-info {
@@ -176,7 +176,7 @@ button:hover {
 }
 
 /* Fade in animasyonu */
-@keyframes fadeIn {
+@keyframes fadeIn1 {
     from {
         opacity: 0;
     }
